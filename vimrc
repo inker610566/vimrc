@@ -69,12 +69,18 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'posva/vim-vue'
 Plugin 'chazy/cscope_maps'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'fatih/vim-go'
+Plugin 'vim-scripts/AutoComplPop'
+Plugin 'johngrib/vim-game-code-break'
 call vundle#end()
 
 let g:jedi#documentation_command = "D"
+let g:go_doc_keywordprg_enabled = 0
 
 " file type
-autocmd Filetype python so ~/.vim/filetype/python.vim
+" autocmd Filetype python so ~/.vim/filetype/python.vim
 autocmd BufNewFile,BufRead *.smali so ~/.vim/filetype/smali.vim
 autocmd BufNewFile,BufRead *.htmld set ft=htmldjango
-
+autocmd BufNewFile,BufRead *.s2e set ft=json
+autocmd BufNewFile,BufRead *.py[23] set ft=python
+au BufRead,BufNewFile *.as set ft=actionscript
